@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .fact {
+            display: none; /* Hide all facts by default */
+            margin-bottom: 30px;
+        }
+    </style>
+</head>
+<body>
+    <p id="top">Did you know?</p>
+
+    <button onclick="showRandomFact()">Random Fact</button>
+    <button onclick="showAllFacts()">Show All Facts</button>
+
+    <div id="factscontainer">
+        <p class="fact">Based on Sigmund Freud's psychosexual stage theory, during the phallic stage, age 6 to puberty, you have incestual sexual feelings towards your opposite gender parent. For boys, it's called Oedipus Complex. For girls, it's called Electra Complex. Additionally, since you like your opposite gender parent, you find the same gender parent as your rival, and thus, you try to copy them, leading to you forming your gender identity.</p>
+        <p class="fact">Based on von Neumann probe theory, In principle, an advanced spacefaring civilisation could send a self-replicating spacecraft to a neighbouring planetary system, where it would seek out raw materials to create replicas of itself. These replicas would then travel to other neighbouring systems. The original "parent" probe would pursue its primary mission on the first planet.
+            We are just naive pawns in a larger game</p>
+        <p class="fact">Based on string theory, we should have at least 5 spatial dimensions with the extra dimension coiling a minimum of 6 dimensions, like a rope with alot of strings. We can only comprehend 3 spatial dimensions plus 1 time dimension. Now the problem is in what shape is the extra dimensions in 5th dimension coiled in, well ther are some fundamental rule pointing to a shape called the calabi yau manifold. However, there are still 10^21 possibilites. Thus, each possibility giving rise to a new distinct universe with its own fundamental laws, pointing to the existance of a mulitunvierse which could only be a few cm away from us but we cannot interact with them.</p>
+        <p class="fact">astroseismology = the study of the internal structure and dynamics of stars by analyzing their natural oscillations. astroseismologist can tell the composition, size, mass, age, reactivity, and more!</p>
+        <p class="fact">The foot-in-the-door phenomenon is a psychological persuasion tactic where someone is more likely to agree to a larger request after first agreeing to a smaller one.</p>
+        <p class="fact">you can be classically conditioned to be happy, study, and do anything. So, manipulate yourself.</p>
+        <p class="fact">"If you have an apple and I have an apple and we exchange apples, then we each still have one apple. But if you have an idea and I have an idea and we exchange them, we each have two ideas." — George Bernard Shaw</p>
+        <p class="fact">The James Webb Space Telescope (JWST) is designed to obtain detailed images and spectra, specifically providing clear infrared (IR) readings of various astronomical targets. These targets include objects within our solar system, such as Kuiper Belt objects, comets, and the outer planets and their moons. Beyond our solar system, JWST also studies circumstellar disks — the regions of dust and gas around young stars — as well as exoplanets, planets that orbit stars outside our solar system.</p>
+        <p class="fact">One of JWST key capabilities is in observing exoplanets and analyzing their atmospheres. This process begins when light from a parent star reflects off an exoplanet’s atmosphere. As the starlight passes through the planet’s atmosphere, the composition of the atmosphere alters the light slightly. This altered light is then captured by JWST’s spectrograph, which breaks the light into a spectrum. Within this spectrum, scientists can observe absorption lines, which are specific wavelengths of light that are absorbed by elements and molecules in the atmosphere. These lines allow astronomers to determine the chemical composition of the planet’s atmosphere and assess whether it might be habitable. Based on data from previous missions like Kepler and TESS, about 2 to 7 out of every 50 planets discovered in the habitable zone have host stars bright enough for JWST to study their atmospheres using infrared spectroscopy.</p>
+        <p class="fact">The Fermi Paradox is the contradiction between the high probability of extraterrestrial life in the universe and the lack of evidence for, or contact with, such civilizations. The paradox is named after Enrico Fermi, an Italian-American physicist known for designing and building the first nuclear reactor under the sports field at the University of Chicago in 1942. His concept of a nuclear chain reaction earned him the 1938 Nobel Prize in Physics for his earlier work on induced radioactivity. Fermi was also renowned for making remarkably accurate estimates and approximations even with little data — a method now referred to as Fermi Questions. These involve making informed guesses and approximations to calculate unknown quantities.
+            In 1950, Fermi famously posed the question that gave rise to the paradox: "If intelligent extraterrestrial life is probable, then... where is everybody? Although intelligent life should have had time to spread across the galaxy, we see no evidence of other civilizations — no visits and no detectable signals. Yet, based on what we know of physics and space travel, such expansion should have already occurred, which is the essence of the Fermi Paradox.
+            How Long Would It Take to Colonize the Galaxy? To illustrate the paradox, scientists have estimated how long it would take an advanced civilization to colonize the Milky Way Galaxy, even with relatively slow interstellar travel.
+            In one scenario, if spacecraft could travel at 10% of the speed of light (30,000 km/sec) and considering the average distance between stars is about 5 light-years, a civilization could be ready to spread to new star systems every 150 years. Starting from the edge of the galactic disk and sending ships to one or two nearby systems, such a civilization could colonize the entire galaxy within about 10 million years, which is only 0.1% of the galaxy’s estimated age.
+            In a second, more conservative scenario, if travel was limited to 1% of the speed of light (3,000 km/sec), it would take about 50 years to reach the nearest star. Assuming they would take 5,000 years to prepare for the next stage of colonization, they could still spread throughout the galaxy in approximately 100 million years, which is about 1% of the galaxy's age.
+            In either case, given that the galaxy is over 10 billion years old, there has been plenty of time for a civilization to spread, yet we see no signs of them — deepening the mystery posed by the Fermi Paradox.</p>
+        <p class="fact">By exposing seed embryos, from the back, to magnetic fields you can not only make the seeds grow faster, but have double the sprouts! This is because the magneitc field penetrates the seed coat allowing a path for moisture to enter and the seed to leave. Meanwhile, somewhere in the, polarized, hormones the magentic field moves it around, leading to a mutation. But we need to know more, so sponsor me as I enter this journey of magnetic fields and seed germination.</p>
+    </div>
+
+    <script>
+        const facts = document.querySelectorAll('.fact');
+
+        function showRandomFact() {
+            hideAllFacts();
+            const randomIndex = Math.floor(Math.random() * facts.length);
+            facts[randomIndex].style.display = 'block';
+        }
+
+        function showAllFacts() {
+            facts.forEach(fact => {
+                fact.style.display = 'block';
+            });
+        }
+
+        function hideAllFacts() {
+            facts.forEach(fact => {
+                fact.style.display = 'none';
+            });
+        }
+    </script>
+</body>
+</html>
